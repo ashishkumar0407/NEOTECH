@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-navy: #0B1424;
+  --color-navy-2: #111D33;
+  --color-graphite: #14161A;
+  --color-steel: #8A94A3;
+  --color-steel-2: #C9CFD8;
+  --color-paper: #F4F5F7;
+  --color-orange: #F26A1B;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--color-paper); color: var(--color-graphite); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+.grid-bg { background-image: linear-gradient(to right, rgb(255 255 255 / .06) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / .06) 1px, transparent 1px); background-size: 64px 64px; }
+.grid-bg-light { background-image: linear-gradient(to right, rgb(11 20 36 / .06) 1px, transparent 1px), linear-gradient(to bottom, rgb(11 20 36 / .06) 1px, transparent 1px); background-size: 64px 64px; }
+@keyframes pulse-dot { 0%,100% { opacity: 1 } 50% { opacity: .25 } }
+.status-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+@keyframes scan {
+  0% { top: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+:focus-visible { outline: 2px solid var(--color-orange); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
