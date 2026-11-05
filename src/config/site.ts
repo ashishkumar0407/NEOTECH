@@ -5,12 +5,12 @@ export const site = {
   short: 'NEOTECH',
   tagline: 'MOULDING THE FUTURE',
   url: 'https://www.example.com', // TODO: production domain
-  city: '' as string, // TODO: factory city (drives SEO copy)
+  city: 'Bahadurgarh',
   serviceArea: '' as string, // TODO: e.g. "Delhi NCR"
-  address: '' as string,
-  phone: '' as string,
+  address: 'Rohad, Bahadurgarh, Haryana 124507',
+  phone: '97297 71818, 97298 24727',
   email: '' as string,
-  whatsapp: '' as string, // digits with country code, e.g. 919XXXXXXXXX
+  whatsapp: '919729771818',
   gstin: '' as string,
   hours: '' as string,
   social: { linkedin: '', facebook: '', instagram: '' },

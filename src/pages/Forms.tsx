@@ -133,7 +133,7 @@ export function Contact() {
     <section id="contact-form" className="mx-auto grid max-w-[1400px] gap-14 px-5 py-20 md:grid-cols-12 md:px-10">
       <dl className="md:col-span-5">{rows.map(([k, v]) => <div key={k} className="border-b border-navy/15 py-4"><dt className="mono text-steel">{k}</dt><dd className="mt-1 text-lg text-navy">{v}</dd></div>)}
         <div className="mt-8 flex flex-wrap gap-3"><a href={waLink()} className="inline-flex min-h-12 items-center bg-navy px-5 font-semibold text-white hover:bg-orange">WhatsApp</a><Link to="/quote" className="inline-flex min-h-12 items-center bg-orange px-5 font-semibold text-white hover:bg-navy">Manufacturing quote</Link></div>
-        <p className="mt-8 text-sm text-steel">Google Maps embed appears here once the factory address is confirmed in <code>config/site.ts</code>.</p></dl>
+      </dl>
       <form ref={formRef} onSubmit={submit} noValidate className="relative grid gap-6 md:col-span-7"><Hp />
         <Field id="name" label="Full name" required error={e.name}><input id="name" name="name" autoComplete="name" className={inp} aria-invalid={!!e.name} /></Field>
         <Field id="email" label="Email" required error={e.email}><input id="email" name="email" type="email" autoComplete="email" className={inp} aria-invalid={!!e.email} /></Field>
